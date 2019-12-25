@@ -20,6 +20,14 @@ import HeaderButton from '@vkontakte/vkui/dist/components/HeaderButton/HeaderBut
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
+import Icon28ServicesOutline from '@vkontakte/icons/dist/28/services_outline';
+import Icon24Download from '@vkontakte/icons/dist/24/download';
+import Icon24Globe from '@vkontakte/icons/dist/24/globe';
+import Icon24LogoGoogle from '@vkontakte/icons/dist/24/logo_google';
+import Icon24Game from '@vkontakte/icons/dist/24/game';
+import Icon24Video from '@vkontakte/icons/dist/24/video';
+import Icon24Mention from '@vkontakte/icons/dist/24/mention';
+
 
 
 import persik from '../img/persik.png';
@@ -29,20 +37,16 @@ const osName = platform();
 
 const Persik = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Что такое TS3?</PanelHeader>
+		<PanelHeader>Скачать сервисы</PanelHeader>
 		<Tabbar>
-          <TabbarItem
+          <TabbarItem fill="#0000FF"
             onClick={go}
             data-to="home"
-          ><Icon28MarketOutline /></TabbarItem>
+          ><Icon28ServicesOutline /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik"
-          ><Icon28HelpOutline fill="#0000FF" /></TabbarItem>
-          <TabbarItem
-            onClick={go}
-            data-to="persik1"
-          ><Icon28Game /></TabbarItem>
+          ><Icon24Download width={30} height={30} fill="#0000FF" /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik3"
@@ -52,87 +56,53 @@ const Persik = ({ id, go, fetchedUser }) => (
             data-to="persik2"
           ><Icon28SettingsOutline /></TabbarItem>
         </Tabbar>
+
         
-     
-        <Group title="Основное понятие">
-           <Div>
-           TeamSpeak — компьютерная программа, предназначенная для голосового общения в сети Интернет посредством технологии VoIP.
-           </Div>
-        </Group>
-
-        <Group title="Для кого эта программа?">
-           <Div>
-            Программы этого типа предназначены прежде всего для геймеров, но могут использоваться везде, где необходима голосовая связь и координация большой группы людей.
-           </Div>
-        </Group>
-
-        <Group title="Ссылки на ресурсы">
-        <div>
-        <center>
-            <br/>
-            <Button size="xl" level="2" component="a" href="https://www.teamspeak.com">Оффициальный сайт</Button>
-            <br/>
-            <Button size="xl" level="2" component="a" href="http://yandex.ru/clck/jsredir?bu=hiup6s&from=yandex.ru%3Bsearch%2F%3Bweb%3B%3B&text=&etext=8760.u8vXQ0QlKbLDuHGXaMokD5UVS6uSJztsYoEOoqkDa_M.eb6d557e48813a30399b90d3f2fc319ca46a3d72&uuid=&state=jLT9ScZ_wbo,&&cst=AiuY0DBWFJ4CiF6OxvZkNPN0doJc_zen-b-FGgyyExoljCFmE_huMYyrylvueCQJXsv0cBTqQoUO3EXhgYrYQ9OeZlmcAy_TZ-7aC0zliep77DcTQYOI3Z3jYBSo7fuaKO4jN_DXmCugfIYUzjBZYD0IvCdh6L4CT2uZV6qEr-ngr3uWbpMwbjvR3L8D4YyF8ZlCsBi-3Tv2qbnRGLJDiAgUyBfG8nc9QMzlpsfBPLYRxOksi5AWvsA93SbzqqEmRlp7Fcpkl_eZar5sWlGVVG58YoBtNhGykqvr1kSF5I_bQgeEjMijA5RDiaZgJ3Eq3_LL8Zp-NExAPrUAQlQB5Oxa3L0lCt8gxDZSRI4jXYhqY0u08gE4ylTgkYvx0gQMf4NpLMKIcU711mAFvMqwZdHU0Z3xdi79xit0PdZSphmnTnEiYITgJlJ3m3frlCi32iYG-zOakbk,&data=UlNrNmk5WktYejY4cHFySjRXSWhXQzdLY3hSTVNzV2ZCVXgzZzFIWmJXemRtSl9GU3pqWkpWdmVCZXY4bjUybmhES3hDa19pNlQxMVItRElnTjFhVVdMbjhnQm5yRjZkVFZLR0tDXzB2ZHBjNTNDRldFMmFtZmdjWXNVMTl5U1Y,&sign=a495ed323df03378ad453c1c2f78ae06&keyno=0&b64e=2&ref=orjY4mGPRjk5boDnW0uvlrrd71vZw9kpBjcjw4i9ONmmvAMITn9118mwjd0mAmmrog0M3ZhZUW_8ldAbN9n7SQ,,&l10n=ru&rp=1&cts=1576946962454%40%40events%3D%5B%7B%22event%22%3A%22click%22%2C%22id%22%3A%22hiup6s%22%2C%22cts%22%3A1576946962454%2C%22fast%22%3A%7B%22organic%22%3A1%7D%2C%22service%22%3A%22web%22%2C%22event-id%22%3A%22k4fti7mekf%22%7D%5D&mc=3.0957952550009344&hdtime=6951.455">Статья в википедии</Button>
-            <br/>
-        </center>
-        </div>
-        </Group>
+        <Group>
+        <Div style={{display: 'flex'}}>
         
-        <Group title="Ссылки на скачивание">
-        <div>
-        <center>
-            <br/>
-            <Button size="xl" level="2" component="a" href="https://www.teamspeak.com/ru/downloads/">Скачать TS3 для ПК</Button>
-            <br/>
-            <Button size="xl" level="2" component="a" href="https://play.google.com/store/apps/details?id=com.teamspeak.ts3client&hl=ru">Скачать TS3 для Android</Button>
-            <br/>
-            <Button size="xl" level="2" component="a" href="https://apps.apple.com/ru/app/teamspeak-3/id577628510">Скачать TS3 для IOS</Button>
-            <br/>
-            </center>
-        </div>
-        <br/>
-        <br/>
-        <br/>
-        </Group>
-
-        <Group title="Плагины">
-        <Div>
-        <i>На TS3 так же имеются плагины. Они встраиваются в клиент и расширяют его функционал, но приложение на Android и IOS пока что не поддерживает плагины</i><br/><br/>
-        <Button size="xl" level="2" component="a" href="https://www.myteamspeak.com/?search=&type=PLUGIN">Перейти к плагинам</Button>
+       <Button size="l" stretched style={{ marginRight: 8 }} onClick={go} data-to="persik" >Android</Button>
+       <Button size="l" stretched level="secondary" onClick={go} data-to="persik1" >IOS</Button>
+           
         </Div>
-        </Group>
+          </Group>
+          
 
-        <Group title="OwerWolf">
-        <Div>
-        <b>Чтобы упросить работу с TeamSpeak есть OwerWolf. Это сборник плагинов для игр. В OwerWolf можно установить так называемый "TeamSpesk OwerLay" и разговаривать с друзьями во время игры. Туда можно скачивать плагины и для других игр, например: Minecraft - Есть сборник крафтов и др.</b><br/><br/>
-        <Button size="xl" level="2" component="a" href="https://www.overwolf.com/">Скачать OwerWolf</Button>
+        
+     <Group title="Выбор APK">
+            <Div>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                
+                <Icon24Globe width={30} height={30} /> }>
+                    Скачать Google Chcome
+                
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                 <Icon24LogoGoogle width={30} height={30}/>}>
+                   Скачать Google Search
+                
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                  <Icon24Game width={30} height={30}/>}>
+                   Скачать Google Play
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                  <Icon24Video width={30} height={30}/>}>
+                  Скачать  YouTube
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                  <Icon24Mention width={35} height={35} />  }>
+                  Скачать  GMail
+                </Button>
+            </Div>
+            <br/>
         <br/>
-        <center>
-        Так же есть и обычающее видео.<br/><br/>
-        <iframe width="300" height="260" src="https://www.youtube.com/embed/Ks5po965K_I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </center>
-        </Div>
-        </Group>
-
-        <Group title="Полезные видеоролики">
-        <Div>
-        <center>
-        <iframe width="300" height="260" src="https://www.youtube.com/embed/Del1IEHmJ5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
-        <Separator style={{ margin: '12px 0' }} />
-        <iframe width="300" height="260" src="https://www.youtube.com/embed/TTASrXvUqas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <Separator style={{ margin: '12px 0' }} />
-        <iframe width="300" height="260" src="https://www.youtube.com/embed/rvJrM88zgS4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </center>
-        </Div>
-        
-        
-        </Group>
-        <Footer>Источники: YouTube, Wikipedia, TeamSpeak, OwerWolf</Footer>
-       <br/>
-      <br/>
-       <br/>
-      <br/>
+          </Group>
+       
 
 	</Panel>
 );

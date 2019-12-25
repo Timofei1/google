@@ -30,6 +30,8 @@ import Icon28Mention from '@vkontakte/icons/dist/28/mention';
 import Icon28ServicesOutline from '@vkontakte/icons/dist/28/services_outline';
 import Icon28KeyboardOutline from '@vkontakte/icons/dist/28/keyboard_outline';
 import Icon32Gift from '@vkontakte/icons/dist/32/gift';
+import Icon24Download from '@vkontakte/icons/dist/24/download';
+
 
 import persik from '../img/persik.png';
 import './Persik.css';
@@ -40,18 +42,14 @@ const Persik2 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Дополнительно</PanelHeader>
 		<Tabbar>
-          <TabbarItem
+          <TabbarItem fill="#0000FF"
             onClick={go}
             data-to="home"
-          ><Icon28MarketOutline /></TabbarItem>
+          ><Icon28ServicesOutline /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik"
-          ><Icon28HelpOutline /></TabbarItem>
-          <TabbarItem
-            onClick={go}
-            data-to="persik1"
-          ><Icon28Game /></TabbarItem>
+          ><Icon24Download width={30} height={30} /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik3"

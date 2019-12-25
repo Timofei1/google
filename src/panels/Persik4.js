@@ -17,10 +17,15 @@ import Icon28SettingsOutline from '@vkontakte/icons/dist/28/settings_outline';
 import Icon28Game from '@vkontakte/icons/dist/28/game';
 import HorizontalScroll from '@vkontakte/vkui/dist/components/HorizontalScroll/HorizontalScroll';
 import Spinner from '@vkontakte/vkui/dist/components/Spinner/Spinner'
-import { Separator, platform } from '@vkontakte/vkui';
-import { PanelHeaderBack, Epic, View, Switch } from '@vkontakte/vkui';
+import { Separator, platform, IOS } from '@vkontakte/vkui';
+import { PanelHeaderBack, Epic, View, Switch, HeaderButton } from '@vkontakte/vkui';
 import PanelSpinner from '@vkontakte/vkui/dist/components/PanelSpinner/PanelSpinner';
 import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
+import Icon28ServicesOutline from '@vkontakte/icons/dist/28/services_outline';
+import Icon24Download from '@vkontakte/icons/dist/24/download';
+import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
+import Icon24Back from '@vkontakte/icons/dist/24/back';
+
 
 import persik from '../img/persik.png';
 import './Persik.css';
@@ -29,21 +34,22 @@ const osName = platform();
 
 const Persik4 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-    <PanelHeader>Купить TS3</PanelHeader>
+    <PanelHeader
+       left={<HeaderButton onClick={go} data-to="home">
+        {osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
+      </HeaderButton>}
+      >
+      Google Chrome</PanelHeader>
      
-       <Tabbar>
+      <Tabbar>
           <TabbarItem fill="#0000FF"
             onClick={go}
             data-to="home"
-          ><Icon28MarketOutline fill="#0000FF" /></TabbarItem>
+          ><Icon28ServicesOutline fill="#0000FF" /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik"
-          ><Icon28HelpOutline /></TabbarItem>
-          <TabbarItem
-            onClick={go}
-            data-to="persik1"
-          ><Icon28Game /></TabbarItem>
+          ><Icon24Download width={30} height={30} /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik3"
@@ -56,194 +62,7 @@ const Persik4 = ({ id, go, fetchedUser }) => (
 
         
         
-        <FixedLayout vertical="top">
-              <Tabs theme="header" type="buttons">
-                <HorizontalScroll>
-                  <TabsItem
-                    onClick={go}
-                    data-to="home"
-                  >
-                    Сервера
-                  </TabsItem>
-                  <TabsItem
-                    onClick={go}
-                    data-to="persik4"
-                  >
-                    <u>Дополнения к серверам</u>
-                  </TabsItem>
-                  <TabsItem
-                    onClick={go}
-                    data-to="persik5"
-                  >
-                    Прочее
-                  </TabsItem>
-                </HorizontalScroll>
-            </Tabs>
-            
-           
-        </FixedLayout>
-
-        <Group>
-        <br/>
-        <br/>
-        <br/>
-        <center>
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Смена IP(с букв. на цифр)</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: 30 рублей
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
         
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4153032%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                       &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-    <Separator style={{ margin: '12px 0' }} />
-
-        
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Адрес по желанию</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: 50 рублей
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4153044%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                       &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-        
-        <Separator style={{ margin: '12px 0' }} />
-    
-        
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Смена адреса(букв.)</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: 30 рублей
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4153052%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                       &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-        <Separator style={{ margin: '12px 0' }} />
-    
-        
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Анти-DDoS</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: 40 рублей
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4153057%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                       &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-        <Separator style={{ margin: '12px 0' }} />
-    
-        
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Муз. бот(х2)</h2>
-        <img src="https://lh3.googleusercontent.com/awutOKZubpyNkZsa67VWu-Va874_65xPJuzQxnzam3ftMktxyE8naKCl8hm-K_NE2g" width="270" />
-        <div className="Cell__description">
-    Цена: 160 рублей
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4153059%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                       &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-        <Separator style={{ margin: '12px 0' }} />
-        </center>
-        
-        <Button size="xl" component="a" href="#">Вверх</Button>
-        <br/>
-        <br/>
-        <br/>
-        </Group>
 	</Panel>
 );
 

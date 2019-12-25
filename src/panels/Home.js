@@ -21,11 +21,13 @@ import { Separator } from '@vkontakte/vkui';
 import { PanelHeaderBack, Epic, View, Switch, platform } from '@vkontakte/vkui';
 import PanelSpinner from '@vkontakte/vkui/dist/components/PanelSpinner/PanelSpinner';
 import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
-
-
-
-
-
+import Icon28ServicesOutline from '@vkontakte/icons/dist/28/services_outline';
+import Icon24Download from '@vkontakte/icons/dist/24/download';
+import Icon24Globe from '@vkontakte/icons/dist/24/globe';
+import Icon24LogoGoogle from '@vkontakte/icons/dist/24/logo_google';
+import Icon24Game from '@vkontakte/icons/dist/24/game';
+import Icon24Video from '@vkontakte/icons/dist/24/video';
+import Icon24Mention from '@vkontakte/icons/dist/24/mention';
 
 
 const Home = ({ go, id}) => (
@@ -33,21 +35,17 @@ const Home = ({ go, id}) => (
   
 
 <Panel id={id}>
-		<PanelHeader>Купить TS3</PanelHeader>
+		<PanelHeader>Выбор сервиса</PanelHeader>
 		 
        <Tabbar>
           <TabbarItem fill="#0000FF"
             onClick={go}
             data-to="home"
-          ><Icon28MarketOutline fill="#0000FF" /></TabbarItem>
+          ><Icon28ServicesOutline fill="#0000FF" /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik"
-          ><Icon28HelpOutline /></TabbarItem>
-          <TabbarItem
-            onClick={go}
-            data-to="persik1"
-          ><Icon28Game /></TabbarItem>
+          ><Icon24Download width={30} height={30} /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik3"
@@ -57,231 +55,53 @@ const Home = ({ go, id}) => (
             data-to="persik2"
           ><Icon28SettingsOutline /></TabbarItem>
         </Tabbar>
-
-        
-        
-        <FixedLayout vertical="top">
-              <Tabs theme="header" type="buttons">
-                <HorizontalScroll>
-                  <TabsItem
-                    onClick={go}
-                    data-to="home"
-                  >
-                    <u>Сервера</u>
-                  </TabsItem>
-                  <TabsItem
-                    onClick={go}
-                    data-to="persik4"
-                  >
-                    Дополнения к серверам
-                  </TabsItem>
-                  <TabsItem
-                    onClick={go}
-                    data-to="persik5"
-                  >
-                    Прочее
-                  </TabsItem>
-                </HorizontalScroll>
-            </Tabs>
-            
-           
-        </FixedLayout>
         
 
-        
-        <Group>
-        <center>
-        
+        <Group title="Выбор Google сервиса">
+            <Div>
+                <Button size="xl" level="2" onClick={go} data-to="persik4" before={
+                
+                <Icon24Globe width={30} height={30} /> }>
+                    Google Chcome
+                
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to="persik5" before={
+                 <Icon24LogoGoogle width={30} height={30}/>}>
+                    Google Search
+                
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                  <Icon24Game width={30} height={30}/>}>
+                    Google Play
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                  <Icon24Video width={30} height={30}/>}>
+                    YouTube
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                  <Icon24Mention width={35} height={35} />  }>
+                    GMail
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                  <Icon24Video width={30} height={30}/>}>
+                    YouTube
+                </Button>
+                <br/>
+                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                  <Icon24Mention width={35} height={35} />  }>
+                    GMail
+                </Button>
+            </Div>
+            <br/>
         <br/>
-        <br/>
-        <br/>
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Новая версия (базовый)</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: 5 рублей/слот
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4152924%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-    <Separator style={{ margin: '12px 0' }} />
 
-        
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Новая версия (с AHTP)</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: 5 рублей/слот
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4152926%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-        
-        <Separator style={{ margin: '12px 0' }} />
-    
-        
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Старые версии</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: 5 рублей/слот
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4152928%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-        <Separator style={{ margin: '12px 0' }} />
-    
-        
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Старые версии(Акция)</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: 50 рублей/100 слотов
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4152929%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-        <Separator style={{ margin: '12px 0' }} />
-    
-        
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Новая версия (БЛ)</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: 2.5 рублей/слот
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4152931%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                       &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-        <Separator style={{ margin: '12px 0' }} />
+          </Group>
 
-        <Button level="tertiary" component="xl" href="#">
-        <h2>Новая версия (БЛ Огр.)</h2>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <div className="Cell__description">
-    Цена: см в описании товара
-    </div>
-    <br/>
-    
-        </Button>
-        <Div>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится товар</b>
-        </Cell>
-        </Div>
-        <center>
-        
-        <div>
-        
-                      
-                      <Button size="l" level="outline" component="a" href="https://vk.com/market-184075993?w=product-184075993_4153003%2Fquery">Купить </Button>
-                      &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/hostingteamspeak"> Продавец</Button>
-                       &nbsp;
-                      <Button size="l" level="outline" component="a" href="https://vk.com/topic-184075993_40405305"> Отзывы</Button>
-                      
-                    </div>
-                                    </center>
-        <Separator style={{ margin: '12px 0' }} />
-        </center>
-        
-        <Button size="xl" component="a" href="#">Вверх</Button>
-        <br/>
-        <br/>
-        <br/>
-        </Group>
-         
-        
 	</Panel>
 );
 

@@ -20,6 +20,9 @@ import HeaderButton from '@vkontakte/vkui/dist/components/HeaderButton/HeaderBut
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
+import Icon28ServicesOutline from '@vkontakte/icons/dist/28/services_outline';
+import Icon24Download from '@vkontakte/icons/dist/24/download';
+
 
 import persik from '../img/persik.png';
 import './Persik.css';
@@ -30,18 +33,14 @@ const Persik3 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Новости</PanelHeader>
 		<Tabbar>
-          <TabbarItem
+          <TabbarItem fill="#0000FF"
             onClick={go}
             data-to="home"
-          ><Icon28MarketOutline /></TabbarItem>
+          ><Icon28ServicesOutline /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik"
-          ><Icon28HelpOutline /></TabbarItem>
-          <TabbarItem
-            onClick={go}
-            data-to="persik1"
-          ><Icon28Game /></TabbarItem>
+          ><Icon24Download width={30} height={30} /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik3"
@@ -49,7 +48,7 @@ const Persik3 = ({ id, go, fetchedUser }) => (
           <TabbarItem
             onClick={go}
             data-to="persik2"
-          ><Icon28SettingsOutline  /></TabbarItem>
+          ><Icon28SettingsOutline /></TabbarItem>
         </Tabbar>
          
         <Gallery
@@ -70,7 +69,7 @@ const Persik3 = ({ id, go, fetchedUser }) => (
         <Group>
         <Div>
         <div style={{ display: 'flex' }}>
-        <b>Версия 1.0</b><h> </h><div className="Cell__description">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 18.12.2019</div>
+        <b>Версия 1.0</b><h> </h><div className="Cell__description">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 22.12.2019</div>
         
         </div>
         </Div>
