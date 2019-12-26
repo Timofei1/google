@@ -71,30 +71,30 @@ const Persik = ({ id, go, fetchedUser }) => (
         
      <Group title="Выбор APK">
             <Div>
-                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                <Button size="xl" level="2" onClick={go} data-to="home" before={
                 
                 <Icon24Globe width={30} height={30} /> }>
                     Скачать Google Chcome
                 
                 </Button>
                 <br/>
-                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                <Button size="xl" level="2" onClick={go} data-to="home" before={
                  <Icon24LogoGoogle width={30} height={30}/>}>
                    Скачать Google Search
                 
                 </Button>
                 <br/>
-                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                <Button size="xl" level="2" onClick={go} data-to="home" before={
                   <Icon24Game width={30} height={30}/>}>
                    Скачать Google Play
                 </Button>
                 <br/>
-                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                <Button size="xl" level="2" onClick={go} data-to="home" before={
                   <Icon24Video width={30} height={30}/>}>
                   Скачать  YouTube
                 </Button>
                 <br/>
-                <Button size="xl" level="2" onClick={go} data-to=" " before={
+                <Button size="xl" level="2" onClick={go} data-to="home" before={
                   <Icon24Mention width={35} height={35} />  }>
                   Скачать  GMail
                 </Button>
